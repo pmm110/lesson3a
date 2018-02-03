@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<script>
+
+function update()
+{
+	var age = document.getElementById("age").value;
+	var number = document.getElementById("number").value;
+	var total = ((100 - age)*365) * number;
+	
+	document.getElementById("snacks").innerHTML = "You will need "+total+" snacks to last you until the ripe old age of 100";
+	
+}
+
+</script>
+<body>
+
+<h2>The Lifetime Supply Calculator</h2>
+
+Enter your age:<br>
+<input type="text" id="age">
+<br><br>
+No. of snacks you eat per day:<br>
+<input type="text" id="number">
+<br><br>
+<input type="button" onClick="update()" value="How many snacks?">
+<br><br>
+
+<div id = "snacks"></div>
+
+</body>
+</html> 

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<script>
+
+function update()
+{
+	var year = document.getElementById("year").value;
+	var ageOne = 2017 - year;
+	var ageTwo = 2018 - year;
+	
+	document.getElementById("age").innerHTML = "You are either "+ageOne+" or "+ageTwo;
+	
+}
+
+</script>
+<body>
+
+<h2>The Age Calculator</h2>
+
+Enter your birth year:<br>
+<input type="text" id="year">
+<br><br>
+<input type="button" onClick="update()" value="How old am I?">
+<br><br>
+
+<div id = "age"></div>
+
+</body>
+</html> 

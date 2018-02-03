@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<script>
+
+var total = 0;
+
+function update()
+{
+	var item = document.getElementById("item").value;
+	var price = parseFloat(document.getElementById("price").value);
+	
+	var node = document.createElement("LI");
+    var textnode = document.createTextNode(item+" $"+price);
+    node.appendChild(textnode);
+    document.getElementById("myList").appendChild(node);
+	
+	total+=price;
+	
+	document.getElementById("cost").innerHTML = total;
+	
+	
+}
+
+</script>
+<body>
+
+<h2>Bonus: Cash Register</h2>
+<div id = "itemList"><ul id="myList">
+  
+</ul>
+</div><br>
+<div>Total: $<span id="cost">0</span></div>
+<br>
+<input type="text" id="item" placeholder="Item">
+<input type="text" id="price" placeholder="Cost">
+<input type="button" onClick="update()" value="Add Item">
+<br><br>
+
+
+
+</body>
+</html> 

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Fortune Teller</h2>
+
+Number of children:<br>
+<input type="text" id="children" value="">
+<br><br>
+Partner's name:<br>
+<input type="text" id="partner" value="">
+<br><br>
+Geographic location:<br>
+<input type="text" id="location" value="">
+<br><br>
+Job title:<br>
+<input type="text" id="job" value="">
+<br><br>
+<input type="button" onClick="update()" value="Tell Me My Fortune!">
+<br><br>
+
+<div id = "fortune"></div>
+
+<script>
+
+function update()
+{
+	var children = document.getElementById("children").value;
+	var partner = document.getElementById("partner").value;
+	var location = document.getElementById("location").value;
+	var job = document.getElementById("job").value;
+	
+	document.getElementById("fortune").innerHTML = "You will be a "+ job +" in "+location+", and married to "+partner+" with "+children+" kids.";
+	
+}
+
+</script>
+
+</body>
+</html> 
